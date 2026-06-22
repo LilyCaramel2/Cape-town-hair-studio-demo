@@ -1,0 +1,252 @@
+/* 
+   The Hair Studio | Sue Maistry
+   Carlton Black & White Elite Aesthetic
+   Clean, Minimalist, High-Impact
+*/
+
+:root {
+    --bg-primary: #000000;
+    --bg-secondary: #0a0a0a;
+    --text-primary: #ffffff;
+    --text-secondary: #888888;
+    --accent-silver: #C0C0C0;
+    --accent-glossy: linear-gradient(135deg, #888888 0%, #ffffff 50%, #888888 100%);
+    --border: 1px solid #1a1a1a;
+    --header-h: 90px;
+    --ease: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .heading {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s var(--ease);
+}
+
+header {
+    height: var(--header-h);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,0.95);
+    border-bottom: var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav a {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-secondary);
+}
+
+nav a:hover, nav a.active {
+    color: var(--text-primary);
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    filter: grayscale(100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 8vw, 5.5rem);
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.hero p {
+    font-size: 1rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--accent-silver);
+}
+
+section {
+    padding: 120px 10%;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.img-frame {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    border: var(--border);
+}
+
+.label {
+    font-size: 0.75rem;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 16px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 20px 48px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s var(--ease);
+}
+
+.btn-primary {
+    background: var(--accent-glossy);
+    color: #000;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(255,255,255,0.15);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--text-primary);
+    color: var(--text-primary);
+}
+
+.btn-outline:hover {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+.menu-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.menu-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: var(--border);
+}
+
+.price {
+    font-weight: 700;
+    color: var(--accent-silver);
+}
+
+.form-box {
+    background: var(--bg-secondary);
+    padding: 60px;
+    border: var(--border);
+}
+
+.input-group {
+    margin-bottom: 32px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+}
+
+.input-group input, .input-group select, .input-group textarea {
+    width: 100%;
+    padding: 16px;
+    background: transparent;
+    border: var(--border);
+    color: #fff;
+    outline: none;
+}
+
+footer {
+    padding: 100px 10% 40px;
+    background: #050505;
+    border-top: var(--border);
+}
+
+.footer-suburbs {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.text-center { text-align: center; }
+.mb-40 { margin-bottom: 40px; }
+
+@media (max-width: 992px) {
+    .grid-2 { grid-template-columns: 1fr; gap: 40px; }
+    .hero h1 { font-size: 3.5rem; }
+    header nav { display: none; }
+}
