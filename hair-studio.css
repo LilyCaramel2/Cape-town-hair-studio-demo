@@ -1,4 +1,4 @@
-/* 
+/*
    The Hair Studio | Sue Maistry
    Carlton Black & White Elite Aesthetic
    Clean, Minimalist, High-Impact
@@ -387,5 +387,47 @@ footer {
 
     .footer-suburbs {
         font-size: 0.62rem;
+    }
+}
+
+
+/* CARAMEL DIGITAL STUDIO PROVENANCE */
+.caramel-footer-credit-wrap {
+    border-top: 1px solid #1a1a1a;
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    padding-top: 24px;
+}
+
+.caramel-footer-credit {
+    align-items: center;
+    color: var(--text-secondary);
+    display: inline-flex;
+    font-size: 0.64rem;
+    font-weight: 600;
+    gap: 10px;
+    letter-spacing: 0.12em;
+    line-height: 1.45;
+    text-transform: uppercase;
+}
+
+.caramel-footer-credit:hover,
+.caramel-footer-credit:focus-visible {
+    color: var(--text-primary);
+}
+
+.caramel-footer-credit img {
+    filter: grayscale(100%);
+    height: 28px;
+    opacity: 0.78;
+    width: 28px;
+}
+
+@media (max-width: 640px) {
+    .caramel-footer-credit {
+        font-size: 0.58rem;
+        justify-content: center;
+        max-width: 270px;
     }
 }
