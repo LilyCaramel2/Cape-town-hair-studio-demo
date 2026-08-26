@@ -431,3 +431,131 @@ footer {
         max-width: 270px;
     }
 }
+
+
+/* RESPONSIVE NAVIGATION AND BOOKING CTA */
+body.menu-open { overflow: hidden; }
+
+.site-header .logo { color: var(--text-primary); }
+.site-menu-toggle {
+    align-items: center;
+    background: transparent;
+    border: 1px solid var(--text-secondary);
+    color: var(--text-primary);
+    cursor: pointer;
+    display: none;
+    font: 700 0.7rem 'Inter', sans-serif;
+    gap: 8px;
+    letter-spacing: 0.14em;
+    min-height: 44px;
+    padding: 10px 14px;
+    text-transform: uppercase;
+}
+
+.desktop-booking-cta {
+    padding: 10px 20px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+}
+
+.site-nav .nav-booking-cta { display: none; }
+
+@media (max-width: 992px) {
+    .site-header {
+        min-height: 76px;
+        padding: 0 6%;
+    }
+
+    .site-menu-toggle { display: inline-flex; }
+    .desktop-booking-cta { display: none; }
+
+    .site-header .site-nav {
+        background: #050505;
+        border-bottom: var(--border);
+        border-top: var(--border);
+        display: none;
+        left: 0;
+        padding: 18px 6% 26px;
+        position: absolute;
+        right: 0;
+        top: 100%;
+    }
+
+    .site-header .site-nav.is-open { display: block; }
+
+    .site-header .site-nav ul {
+        align-items: stretch;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .site-header .site-nav li,
+    .site-header .site-nav a { width: 100%; }
+
+    .site-header .site-nav a {
+        align-items: center;
+        border-bottom: var(--border);
+        display: flex;
+        min-height: 48px;
+        padding: 12px 0;
+    }
+
+    .site-header .site-nav .nav-booking-cta {
+        align-items: center;
+        display: inline-flex;
+        justify-content: center;
+        margin-top: 14px;
+        min-height: 48px;
+        padding: 15px 18px;
+    }
+
+    .hero { min-height: 620px; }
+    .hero-content > div[style*="margin-top"] {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 32px !important;
+    }
+
+    .hero-content > div[style*="margin-top"] .btn {
+        margin-left: 0 !important;
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .site-header .logo { font-size: 0.95rem; }
+    .site-menu-toggle { font-size: 0.65rem; padding: 9px 11px; }
+    .hero { min-height: 560px; }
+    .hero h1 { font-size: clamp(2.6rem, 13vw, 3.5rem); }
+}
+
+
+.journal-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.journal-preview-grid h3 a:hover,
+.journal-preview-grid .read-more:hover { color: var(--accent-silver); }
+
+@media (max-width: 992px) {
+    .journal-preview-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+    .journal-preview-grid { grid-template-columns: 1fr; gap: 24px; }
+}
+
+
+@media (max-width: 992px) {
+    .blog-grid { grid-template-columns: 1fr; gap: 40px; }
+    .blog-grid .post-img { height: 300px; }
+}
+
+@media (max-width: 640px) {
+    .blog-grid .post-img { height: 240px; }
+    .form-box { padding: 28px; }
+}

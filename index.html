@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Hair Studio | Sue Maistry | Fish Hoek</title>
+    <title>Hairdresser Fish Hoek | The Hair Studio | Sue Maistry</title>
+    <meta name="description" content="The Hair Studio is a Fish Hoek hairdresser led by Sue Maistry, offering precision cuts, blow dries, colour, and one-to-one appointments.">
     <link rel="stylesheet" href="hair-studio.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header>
-        <div class="logo">THE HAIR STUDIO</div>
-        <nav>
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="The Hair Studio home">THE HAIR STUDIO</a>
+        <button class="site-menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+            <span aria-hidden="true">☰</span><span>Menu</span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="blog.html">Journal</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://wa.me/27814152522" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-booking-cta" data-cta-location="header_mobile">Book now</a></li>
             </ul>
         </nav>
-        <div class="actions">
-            <a href="https://wa.me/27814152522" class="btn-outline" style="padding: 10px 20px; font-size: 0.7rem;">Book Now</a>
-        </div>
+        <a href="https://wa.me/27814152522" target="_blank" rel="noopener noreferrer" class="btn btn-outline desktop-booking-cta" data-cta-location="header_desktop">Book now</a>
     </header>
 
     <main>
@@ -32,8 +34,8 @@
                 <p>Senior Stylist • ex-Carlton Hair</p>
                 <h1>The Hair Studio</h1>
                 <div style="margin-top: 48px;">
-                    <a href="services.html" class="btn btn-primary">Service Menu</a>
-                    <a href="https://wa.me/27814152522" class="btn btn-outline" style="margin-left: 20px;">WhatsApp Sue</a>
+                    <a href="services.html" class="btn btn-primary" data-cta-location="hero_services">Service Menu</a>
+                    <a href="https://wa.me/27814152522" class="btn btn-outline" style="margin-left: 20px;" target="_blank" rel="noopener noreferrer" data-cta-location="hero_whatsapp">WhatsApp Sue</a>
                 </div>
             </div>
         </section>
@@ -62,7 +64,7 @@
                 <div class="menu-row"><span>Pensioner Special (Over 60s)</span><span class="price">R150</span></div>
                 <div class="menu-row"><span>Full Colour</span><span class="price">From R360</span></div>
                 <div style="text-align: center; margin-top: 60px;">
-                    <a href="services.html" class="btn btn-primary">View Full Menu</a>
+                    <a href="services.html" class="btn btn-primary" data-cta-location="signature_services">View Full Menu</a>
                 </div>
             </div>
         </section>
@@ -91,25 +93,28 @@
                 <span class="label">The Style Journal</span>
                 <h2 class="heading">Latest Insights</h2>
             </div>
-            <div class="grid-2" style="grid-template-columns: repeat(3, 1fr); gap: 30px;">
+            <div class="journal-preview-grid">
                 <div style="border: var(--border); padding: 20px;">
                     <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=500" alt="Precision haircut article in Fish Hoek" style="width:100%; height:200px; object-fit:cover; filter:grayscale(100%); margin-bottom:20px;">
-                    <h3 class="heading" style="font-size: 0.9rem;">Precision Haircut in Fish Hoek</h3>
+                    <h3 class="heading" style="font-size: 0.9rem;"><a href="precision-haircut-fish-hoek.html">Precision Haircut in Fish Hoek</a></h3>
                     <p style="font-size: 0.8rem; margin-top: 10px;">The foundation of shape, movement, and everyday confidence...</p>
+                    <a href="precision-haircut-fish-hoek.html" class="read-more" data-cta-location="home_journal_precision">Read article</a>
                 </div>
                 <div style="border: var(--border); padding: 20px;">
                     <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=500" alt="Hair colour article in Fish Hoek" style="width:100%; height:200px; object-fit:cover; filter:grayscale(100%); margin-bottom:20px;">
-                    <h3 class="heading" style="font-size: 0.9rem;">Hair Colour Specialist</h3>
+                    <h3 class="heading" style="font-size: 0.9rem;"><a href="hair-colour-specialist-fish-hoek.html">Hair Colour Specialist</a></h3>
                     <p style="font-size: 0.8rem; margin-top: 10px;">Tailored colour services for polished, expressive results...</p>
+                    <a href="hair-colour-specialist-fish-hoek.html" class="read-more" data-cta-location="home_journal_colour">Read article</a>
                 </div>
                 <div style="border: var(--border); padding: 20px;">
                     <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=500" alt="Winter hair repair article in Fish Hoek" style="width:100%; height:200px; object-fit:cover; filter:grayscale(100%); margin-bottom:20px;">
-                    <h3 class="heading" style="font-size: 0.9rem;">Winter Hair Repair</h3>
+                    <h3 class="heading" style="font-size: 0.9rem;"><a href="winter-hair-repair-fish-hoek.html">Winter Hair Repair</a></h3>
                     <p style="font-size: 0.8rem; margin-top: 10px;">Nourishing seasonal care for softer, healthier hair...</p>
+                    <a href="winter-hair-repair-fish-hoek.html" class="read-more" data-cta-location="home_journal_winter">Read article</a>
                 </div>
             </div>
             <div style="text-align: center; margin-top: 60px;">
-                <a href="blog.html" class="btn btn-outline">Read The Journal</a>
+                <a href="blog.html" class="btn btn-outline" data-cta-location="home_journal">Read The Journal</a>
             </div>
         </section>
 
@@ -124,6 +129,8 @@
                         <p>1st Floor, Windsor House, Main Road, Fish Hoek</p>
                         <p style="margin-top: 20px; font-weight: 700;">Hours</p>
                         <p>Mon - Fri: 08:30 - 17:00 | Sat: 08:30 - 13:00</p>
+                        <p style="margin-top: 20px; font-weight: 700;">Phone</p>
+                        <p><a href="tel:+27814152522" data-cta-location="home_phone">081 415 2522</a></p>
                     </div>
                 </div>
                 <div class="form-box">
@@ -145,7 +152,7 @@
                             <label>Message</label>
                             <textarea name="message" rows="4"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;" data-cta-location="home_enquiry_form">Send Inquiry</button>
                     </form>
                 </div>
             </div>
@@ -153,6 +160,7 @@
 
         <div style="height: 500px; width: 100%; filter: grayscale(100%) invert(1);">
             <iframe
+                title="The Hair Studio location in Fish Hoek"
                 src="https://www.google.com/maps?q=1st%20Floor%2C%20Windsor%20House%2C%20Main%20Road%2C%20Fish%20Hoek%2C%207975&output=embed"
                 width="100%"
                 height="100%"
@@ -181,9 +189,10 @@
         </div>
 </footer>
 
-    <a href="https://wa.me/27814152522" class="whatsapp-float">
+    <a href="https://wa.me/27814152522" class="whatsapp-float" aria-label="Chat with Sue on WhatsApp" data-cta-location="sticky_whatsapp">
         <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.224-3.82c1.516.903 3.076 1.357 4.67 1.358 5.452 0 9.89-4.438 9.893-9.891 0-2.646-1.03-5.132-2.902-7.004-1.872-1.871-4.358-2.901-7.004-2.902-5.454 0-9.891 4.438-9.893 9.891-.001 1.705.433 3.374 1.254 4.848l-.997 3.637 3.73-.979zm11.387-7.464c-.301-.15-.1.15-1.779-.838-.114-.057-.205-.086-.304.058-.101.144-.38.478-.466.574-.085.096-.171.108-.472.043-.301-.065-1.272-.469-2.423-1.494-.896-.799-1.502-1.785-1.678-2.086-.175-.301-.019-.463.132-.612.135-.133.301-.35.451-.525.15-.175.201-.299.301-.498.101-.199.05-.374-.025-.525s-.677-1.635-.927-2.241c-.244-.593-.491-.512-.677-.521-.175-.008-.376-.01-.577-.01-.201 0-.526.075-.801.374-.275.299-1.051 1.026-1.051 2.502 0 1.476 1.077 2.903 1.227 3.102.15.199 2.119 3.235 5.132 4.534.717.308 1.275.493 1.711.631.721.23 1.376.197 1.894.12.578-.087 1.779-.726 2.03-1.426.25-.7.25-1.299.174-1.426-.075-.126-.275-.201-.576-.351z"/></svg>
     </a>
 
+    <script src="hair-studio.js"></script>
 </body>
 </html>

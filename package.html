@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website & SEO Package | The Hair Studio</title>
+    <meta name="robots" content="noindex, nofollow">
     <meta name="description" content="Website, SEO, blog content, and branding package details for The Hair Studio.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,19 +13,23 @@
     <link rel="stylesheet" href="hair-studio.css">
 </head>
 <body>
-
-    <header>
-        <div class="logo">THE HAIR STUDIO</div>
-        <nav>
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="The Hair Studio home">THE HAIR STUDIO</a>
+        <button class="site-menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+            <span aria-hidden="true">☰</span><span>Menu</span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="blog.html">Journal</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="package.html" class="active">Package</a></li>
+                <li><a href="package.html" class="active" aria-current="page">Package</a></li>
+                <li><a href="https://wa.me/27814152522" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-booking-cta" data-cta-location="header_mobile">Book now</a></li>
             </ul>
         </nav>
+        <a href="https://wa.me/27814152522" target="_blank" rel="noopener noreferrer" class="btn btn-outline desktop-booking-cta" data-cta-location="header_desktop">Book now</a>
     </header>
 
     <main>
@@ -281,5 +286,6 @@
         </div>
 </footer>
 
+    <script src="hair-studio.js"></script>
 </body>
 </html>
